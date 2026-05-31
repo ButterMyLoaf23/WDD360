@@ -5,8 +5,8 @@
         value = $bindable(),
         type = "text"
     } = $props< {
-        label: String;
-        value: String;
+        label: string;
+        value: string;
         type?: "text" | "email" | "textarea";
     } >();
 
@@ -35,7 +35,7 @@
 
         if (event.key === "Escape") {
             event.preventDefault();
-            commitEdit();
+            cancelEdit();
         }
     }
     
