@@ -18,6 +18,3 @@
     type = "email"
     bind:value={email}
 />
-
-<p>Name: {name}</p>
-<p>Email: {email}</p>

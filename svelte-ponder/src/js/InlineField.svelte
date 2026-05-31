@@ -12,6 +12,7 @@
 
     let isEditing = $state(false);
     let originalValue = value;
+    let displayEl: HTMLElement | null = null;
 
     function startEdit() {
         originalValue = value;
@@ -20,11 +21,13 @@
 
     function commitEdit() {
         isEditing = false;
+        displayEl?.focus();
     }
 
     function cancelEdit() {
         value = originalValue;
         isEditing = false;
+        displayEl?.focus();
     }
 
     function onInputKeyDown(event: KeyboardEvent) {
